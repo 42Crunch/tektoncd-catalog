@@ -39,7 +39,7 @@ This task uses Docker image for 42Crunch REST API Static Security Testing which 
 ## Parameters
 
 | Variable                     | Usage                                                                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | x42c_repository_url (\*)     | Source control repository URL. Needed to identify API collection on 42Crunch Platform.                                                                                    |
 | x42c_branch_name (\*\*)      | Source control branch name.                                                                                                                                               |
 | x42c_tag_name (\*\*)         | Source control tag name.                                                                                                                                                  |
@@ -52,7 +52,7 @@ This task uses Docker image for 42Crunch REST API Static Security Testing which 
 | x42c_log_level               | Log level, one of FATAL, ERROR, WARN, INFO, DEBUG. Default: INFO.                                                                                                         |
 | x42c_share_everyone          | Share new API collections with everyone, one of: OFF, READ_ONLY, READ_WRITE. Default: OFF.                                                                                |
 | x42c_api_tags                | Set tags for newly created APIs in the format “category1:name1 category2:name2”, optional.                                                                                |
-| x42c_skip_local_checks       | If set to 'true', disables all local failure conditions (like minimum score) and fails execution only if the criteria defined in SQGs are not met. Default is false.      |     |
+| x42c_skip_local_checks       | If set to 'true', disables all local failure conditions (like minimum score) and fails execution only if the criteria defined in SQGs are not met. Default is false.      |
 | x42c_ignore_network_errors   | If set to 'true', forces to complete execution successfully even if a network error has occurred (such as a failure to connect to 4unch Platform, etc). Default is false. |
 | x42c_ignore_failures         | If set to 'true', forces to complete execution successfully even if the failures conditions (like min-score or SQG criteria) you have set are met. Default is false.      |
 | x42c_json_report             | Writes Audit report in JSON format to a specified file, optional. Default: "", no report is written.                                                                      |
