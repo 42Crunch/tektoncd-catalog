@@ -38,24 +38,25 @@ This task uses Docker image for 42Crunch REST API Static Security Testing which 
 
 ## Parameters
 
-| Variable                     | Usage                                                                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| x42c_repository_url (\*)     | Source control repository URL. Needed to identify API collection on 42Crunch Platform.                                                                                    |
-| x42c_branch_name (\*\*)      | Source control branch name.                                                                                                                                               |
-| x42c_tag_name (\*\*)         | Source control tag name.                                                                                                                                                  |
-| x42c_pr_id (\*\*)            | Source control PR ID.                                                                                                                                                     |
-| x42c_pr_target_branch        | Source control PR target branch name.                                                                                                                                     |
-| x42c_secret_name (\*)        | Name of the secret that contains the API token to access 42Crunch Platform. Default: 42crunch-api-token                                                                   |
-| x42c_min_score               | Minimum score for OpenAPI files. Default: 75.                                                                                                                             |
-| x42c_platform_url            | 42Crunch Platform URL. Default: https://platform.42crunch.com.                                                                                                            |
-| x42c_default_collection_name | The default collection name used when creating collections for discovered apis.                                                                                           |
-| x42c_log_level               | Log level, one of FATAL, ERROR, WARN, INFO, DEBUG. Default: INFO.                                                                                                         |
-| x42c_share_everyone          | Share new API collections with everyone, one of: OFF, READ_ONLY, READ_WRITE. Default: OFF.                                                                                |
-| x42c_api_tags                | Set tags for newly created APIs in the format “category1:name1 category2:name2”, optional.                                                                                |
-| x42c_skip_local_checks       | If set to 'true', disables all local failure conditions (like minimum score) and fails execution only if the criteria defined in SQGs are not met. Default is false.      |
-| x42c_ignore_network_errors   | If set to 'true', forces to complete execution successfully even if a network error has occurred (such as a failure to connect to 4unch Platform, etc). Default is false. |
-| x42c_ignore_failures         | If set to 'true', forces to complete execution successfully even if the failures conditions (like min-score or SQG criteria) you have set are met. Default is false.      |
-| x42c_json_report             | Writes Audit report in JSON format to a specified file, optional. Default: "", no report is written.                                                                      |
+| Variable                     | Usage                                                                                                                                                                                                              |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| x42c_repository_url (\*)     | Source control repository URL. Needed to identify API collection on 42Crunch Platform.                                                                                                                             |
+| x42c_branch_name (\*\*)      | Source control branch name.                                                                                                                                                                                        |
+| x42c_tag_name (\*\*)         | Source control tag name.                                                                                                                                                                                           |
+| x42c_pr_id (\*\*)            | Source control PR ID.                                                                                                                                                                                              |
+| x42c_pr_target_branch        | Source control PR target branch name.                                                                                                                                                                              |
+| x42c_secret_name (\*)        | Name of the secret that contains the API token to access 42Crunch Platform. Default: 42crunch-api-token                                                                                                            |
+| x42c_root_directory          | By default the container finds OpenAPI files and the 42c-conf.yaml configuration file in the /workspace directory of the container. By setting this variable you can configure audit to use a different directory. |
+| x42c_min_score               | Minimum score for OpenAPI files. Default: 75.                                                                                                                                                                      |
+| x42c_platform_url            | 42Crunch Platform URL. Default: https://platform.42crunch.com.                                                                                                                                                     |
+| x42c_default_collection_name | The default collection name used when creating collections for discovered apis.                                                                                                                                    |
+| x42c_log_level               | Log level, one of FATAL, ERROR, WARN, INFO, DEBUG. Default: INFO.                                                                                                                                                  |
+| x42c_share_everyone          | Share new API collections with everyone, one of: OFF, READ_ONLY, READ_WRITE. Default: OFF.                                                                                                                         |
+| x42c_api_tags                | Set tags for newly created APIs in the format “category1:name1 category2:name2”, optional.                                                                                                                         |
+| x42c_skip_local_checks       | If set to 'true', disables all local failure conditions (like minimum score) and fails execution only if the criteria defined in SQGs are not met. Default is false.                                               |
+| x42c_ignore_network_errors   | If set to 'true', forces to complete execution successfully even if a network error has occurred (such as a failure to connect to 4unch Platform, etc). Default is false.                                          |
+| x42c_ignore_failures         | If set to 'true', forces to complete execution successfully even if the failures conditions (like min-score or SQG criteria) you have set are met. Default is false.                                               |
+| x42c_json_report             | Writes Audit report in JSON format to a specified file, optional. Default: "", no report is written.                                                                                                               |
 
 _(\*) = required parameter._
 

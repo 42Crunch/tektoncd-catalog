@@ -37,6 +37,9 @@ spec:
     - name: x42c_secret_name
       description: Name of the secret that contains the API token to access 42Crunch Platform.
       default: "42crunch-api-token"
+    - name: x42c_root_directory
+      description: "The root directory that contains the 42c-conf.yaml configuration file and the APIs. If not specified, the current working directory of the task is used."
+      default: ""
     - name: x42c_min_score
       description: Minimum score for OpenAPI files.
       default: "75"
@@ -76,6 +79,8 @@ spec:
           value: $(params.x42c_pr_id)
         - name: "X42C_PR_TARGET_BRANCH"
           value: $(params.x42c_pr_target_branch)
+        - name: "X42C_ROOT_DIRECTORY"
+          value: $(params.x42c_root_directory)
         - name: "X42C_MIN_SCORE"
           value: $(params.x42c_min_score)
         - name: "X42C_PLATFORM_URL"
